@@ -1,0 +1,89 @@
+body {
+  background-color: #000;
+  color: gold;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 50px;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  color: gold;
+}
+
+
+h1 {
+  color: gold;
+}
+
+#panier-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.panier-item {
+  background-color: #111;
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.panier-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions {
+  position: relative;
+display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.actions button {
+  background-color: gold;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #111;
+  padding: 10px 0;
+  border-top: 1px solid gold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(89%) saturate(506%) hue-rotate(1deg) brightness(105%) contrast(105%);
+}

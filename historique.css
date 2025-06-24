@@ -1,0 +1,76 @@
+body {
+  background-color: #000;
+  color: gold;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 50px;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+
+#historique-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.commande {
+  background-color: #111;
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.commande h3 {
+  color: #00f0ff;
+}
+
+.article {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  border-top: 1px dashed gold;
+  padding-top: 10px;
+}
+
+.article img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.filtre-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtre-section input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #111;
+  color: gold;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #111;
+  padding: 10px 0;
+  border-top: 1px solid gold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(89%) saturate(506%) hue-rotate(1deg) brightness(105%) contrast(105%);
+}

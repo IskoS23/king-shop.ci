@@ -1,0 +1,95 @@
+body {
+  background-color: #000;
+  color: gold;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+
+h1, h2 {
+  color: gold;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-left: 200px;
+  padding-right: 200px;
+  position: relative;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+}
+
+button {
+  background-color: gold;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffc107;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111;
+  color: white;
+}
+
+th, td {
+  border: 1px solid gold;
+  padding: 8px;
+  text-align: center;
+}
+
+.actions button {
+  margin: 2px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions .edit {
+  background-color: #3498db;
+  color: white;
+}
+
+.actions .delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #111;
+  padding: 10px 0;
+  border-top: 1px solid gold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(89%) saturate(506%) hue-rotate(1deg) brightness(105%) contrast(105%);
+}

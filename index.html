@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Bienvenue dans la boutique KING SHOP, passez vos commandes et soyez livré rapidement." />
+  <title>KING SHOP-Accueil</title>
+  <link rel="shortcut icon" href="image\favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="image\apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="image\favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image\favicon-16x16.png">
+  <link rel="stylesheet" href="collection.css" />
+</head>
+<body>
+  <header>
+     <h1>KING SHOP</h1>
+  
+  <img src="image/logo.svg" alt="Logo de la boutique" class="logo" style="width: 100px; height: 100px;"/>
+    <h3>Bienvenue dans notre boutique en ligne</h3>
+    <p>Découvrez nos articles tendance pour hommes et femmes.</p>
+  
+    <nav class="header-nav">
+     <a href="profil.html"><img src="icons/user.svg" alt="Profil" /></a>
+    </nav>
+<img src="image/20250618_113639.jpg" alt="baniere" class="banner" style="width: 100%; height: 300px; margin-top: 20px;"/>
+
+    <h2><em>Collection</em></h2>
+  </header>
+  <section class="filtre-section">
+    <input type="text" id="filtre-motcle" placeholder="🔍 Rechercher un article..." oninput="filtrerArticles()" />
+    <div class="prix-range">
+      <input type="number" id="filtre-prix-min" placeholder="Prix min" oninput="filtrerArticles()" />
+      <input type="number" id="filtre-prix-max" placeholder="Prix max" oninput="filtrerArticles()" />
+    </div>
+  </section>
+
+  <main id="collection-container">
+    <!-- Articles affichés ici -->
+  </main>
+
+  <nav class="bottom-nav" id="nav-bar">
+  <a href="index.html"><img src="icons/home.svg" alt="Accueil" /></a>
+  <a href="homme.html"><img src="icons/man.svg" alt="Homme" /></a>
+  <a href="femme.html"><img src="icons/woman.svg" alt="Femme" /></a>
+  <a href="panier.html"><img src="icons/cart.svg" alt="Panier" /></a>
+  <a href="historique.html"><img src="icons/history.svg" alt="Historique" /></a>
+
+  <!-- Ici, on insérera dynamiquement "Ajout" si admin -->
+</nav>
+<hr>
+<footer>
+  <p>© 2025 KING SHOP. Tous droits réservés.</p>
+  <p>Contact : <a href="tel:+225 0798319013">0798319013</a></P>
+    <P>
+      Pour toute question ou suggestion, n'hésitez pas à nous contacter par email <a href="mailto:kouadiokouassijacques03@gmail.com">ICI</a>.
+    </P>
+</footer>
+
+  <script src="index.js"></script>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("utilisateurConnecte"));
+    if (user && (user.role === "admin" || user.email === "kouadiokouassijacques03@gmail.com" || user.tel === "0798319013")) {
+      const nav = document.getElementById("nav-bar");
+
+      const ajoutLink = document.createElement("a");
+      ajoutLink.href = "ajout.html";
+      ajoutLink.innerHTML = `<img src="icons/plus.svg" alt="Ajout" />`;
+      nav.appendChild(ajoutLink);
+    }
+  });
+</script>
+
+</body>
+</html>

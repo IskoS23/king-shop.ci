@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentification</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+  </header>
+
+  <main>
+    <div class="switcher">
+      <button id="btn-login">Connexion</button>
+      <button id="btn-register">Inscription</button>
+    </div>
+
+    <div id="login-form" class="form-container">
+      <h2>Connexion</h2>
+      <input type="text" id="login-email" placeholder="Email ou nom d'utilisateur" required>
+      <input type="text" id="login-phone" placeholder="Numéro de téléphone" required>
+      <div class="password-wrapper">
+        <input type="password" id="login-password" placeholder="Mot de passe" required>
+        <span class="toggle-password" onclick="togglePassword('login-password')">👁</span>
+      </div>
+      <label><input type="checkbox" id="rememberMe"> Se souvenir de moi</label>
+      <button onclick="login()">Se connecter</button>
+      <div class="social-login">
+        <button onclick="connectWithFacebook()">Facebook</button>
+        <button onclick="connectWithGoogle()">Google</button>
+      </div>
+    </div>
+
+    <div id="register-form" class="form-container hidden">
+      <h2>Inscription</h2>
+      <input type="text" id="register-firstname" placeholder="Prénom" required>
+      <input type="text" id="register-lastname" placeholder="Nom de famille" required>
+      <input type="email" id="register-email" placeholder="Email" required>
+      <input type="text" id="register-phone" placeholder="Numéro de téléphone" required>
+      <input type="text" id="register-address" placeholder="Adresse" required>
+
+      <div class="password-wrapper">
+        <input type="password" id="register-password" placeholder="Mot de passe" required>
+        <span class="toggle-password" onclick="togglePassword('register-password')">👁</span>
+        <div id="strength-indicator"></div>
+      </div>
+      <div class="password-wrapper">
+        <input type="password" id="confirm-password" placeholder="Confirmer le mot de passe" required>
+        <span class="toggle-password" onclick="togglePassword('confirm-password')">👁</span>
+        <div id="match-indicator"></div>
+      </div>
+      <button onclick="register()">S'inscrire</button>
+    </div>
+    
+    <!-- Champ caché pour connexion admin -->
+    <input type="hidden" id="admin-login" value="false">
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

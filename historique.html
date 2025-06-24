@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KING SHOP-Historique des Commandes</title>
+    <link rel="shortcut icon" href="image\favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="image\apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="image\favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image\favicon-16x16.png">
+  <meta name="description" content="Consultez l'historique de vos commandes sur KING SHOP. Suivez vos achats et restez informé de vos transactions.">
+  <link rel="stylesheet" href="historique.css">
+</head>
+<body>
+  <header>
+<h1>KING SHOP</h1>
+  
+  <img src="image/logo.svg" alt="Logo de la boutique" class="logo" style="width: 200px; height: 200px;"/>
+
+    <h2><em>Historique des Commandes</em></h2>
+  </header>
+  
+<section class="filtre-section">
+  <input type="text" id="filtre-motcle" placeholder="🔍 Rechercher un article..." oninput="filtrer()">
+  <input type="date" id="filtre-date" onchange="filtrer()">
+</section>
+
+<div id="filtres">
+  <input type="date" id="filtre-date">
+  <input type="text" id="filtre-motcle" placeholder="Rechercher un article...">
+  <button onclick="filtrer()">Filtrer</button>
+</div>
+
+  <nav class="bottom-nav" id="nav-bar">
+  <a href="index.html"><img src="icons/home.svg" alt="Accueil" /></a>
+  <a href="homme.html"><img src="icons/man.svg" alt="Homme" /></a>
+  <a href="femme.html"><img src="icons/woman.svg" alt="Femme" /></a>
+  <a href="panier.html"><img src="icons/cart.svg" alt="Panier" /></a>
+  <a href="historique.html"><img src="icons/history.svg" alt="Historique" /></a>
+  <!-- Ici, on insérera dynamiquement "Ajout" si admin -->
+</nav>
+
+  <main id="historique-container">
+    <!-- Commandes affichées ici -->
+  </main>
+
+  <script src="historique.js"></script>
+  <script src="session.js"></script>
+
+</body>
+</html>

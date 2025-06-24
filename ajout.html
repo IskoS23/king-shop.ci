@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KING SHOP-Ajout d'Articles</title>
+   <link rel="shortcut icon" href="image\favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="image\apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="image\favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image\favicon-16x16.png">
+  
+  <link rel="stylesheet" href="ajout.css" />
+
+<style>
+    body {
+      background-color: #000;
+      color: gold;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input, select, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #555;
+    }
+
+    .article-card {
+      border: 1px solid #555;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #111;
+      border-radius: 10px;
+    }
+
+    .article-card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkblue;
+    }
+
+    #preview {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      display: none;
+    }
+  </style>
+
+
+</head>
+<body>
+  <header>
+    <h2><em>Gestion des Articles</em></h2>
+  </header>
+
+
+<form onsubmit="event.preventDefault(); ajouterArticle();">
+    <input type="text" id="titre" placeholder="Titre de l'article" required>
+    <textarea id="description" placeholder="Description" required></textarea>
+    <select id="categorie">
+      <option value="homme">Homme</option>
+      <option value="femme">Femme</option>
+    </select>
+    <input type="number" id="prix" placeholder="Prix (FCFA)" required>
+    <input type="number" id="stock" placeholder="Stock disponible" required>
+    <input type="file" id="image" accept="image/*">
+    <img id="preview" alt="Aperçu de l'image" />
+    <button type="submit">Enregistrer l'article</button>
+  </form>
+
+  <hr>
+
+  <h2>Articles existants</h2>
+  <div id="articles-container"></div>
+
+
+
+ 
+  <nav class="bottom-nav" id="nav-bar">
+  <a href="index.html"><img src="icons/home.svg" alt="Accueil" /></a>
+  <a href="homme.html"><img src="icons/man.svg" alt="Homme" /></a>
+  <a href="femme.html"><img src="icons/woman.svg" alt="Femme" /></a>
+  <a href="panier.html"><img src="icons/cart.svg" alt="Panier" /></a>
+  <a href="historique.html"><img src="icons/history.svg" alt="Historique" /></a>
+  <!-- Ici, on insérera dynamiquement "Ajout" si admin -->
+</nav>
+
+  <script src="ajout.js"></script>
+</body>
+</html>
